@@ -313,7 +313,7 @@ else:
 
     # Check if replication is still running
     results = execute_query(
-        connection_secondary, f"select subname from pg_subscription where subname like 'subscription_{db_name_secondary}_%'")
+        connection_secondary, f"select subname from pg_subscription where subname like 'subscription_{db_name_primary}_%'")
     if results:
         subscription_name = results[0][0]
         # Wait for the first step of replication to complete

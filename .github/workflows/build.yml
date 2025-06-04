@@ -3,7 +3,7 @@ name: Build Python package
 on:
   push:
     tags:
-      - 'v'  # déclenché lors d'un tag du type v1.2.3
+      - 'v*'  # déclenché lors d'un tag du type v1.2.3
 
 jobs:
   build:
